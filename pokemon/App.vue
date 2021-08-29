@@ -1,6 +1,5 @@
 <template>
     <div class="card">
-        <button @click="fetchData">Fetch</button>
         <div class="title">title</div>
         <div class="content">content</div>
         <div class="description">description</div>
@@ -15,6 +14,9 @@ export default {
         return {
             pokemon: {},
         }
+    },
+    created: function() {
+        this.fetchData();
     },
     methods: {
         async fetchData() {
