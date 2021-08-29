@@ -1,8 +1,14 @@
 <template>
-  <p>Hi Dear Customer</p>
+  <my-button color="white" background="darkslateblue" disabled="true" />
 </template>
+
 <script>
-export default {};
+import MyButton from "./MyButton.vue";
+export default {
+  components: {
+    MyButton,
+  },
+};
 </script>
 
 <style>
