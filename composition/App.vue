@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { ref, reactive, computed } from 'vue';
+import { ref, reactive, computed, watch, watchEffect } from 'vue';
 
 export default {
     setup() {
@@ -30,6 +30,10 @@ export default {
         const total = computed(() => {
             return count.value + numbers.a + numbers.b
         });
+
+        watch(numbers, (newVal) => {
+            console.log(newVal.a, newVal.b)
+        }, { immediate: true })
 
         return {
             total,
