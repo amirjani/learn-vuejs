@@ -5,7 +5,11 @@
         </button>
     </div>
 
-    <hashtag :key="tag" v-for="tag in post.hashtags" :tag="tag" />
+    <hashtag 
+        :key="tag" 
+        v-for="tag in post.hashtags" 
+        :tag="tag" 
+    />
 </template>
 
 <script>
@@ -17,9 +21,6 @@ export default {
         post: {
             type: Object,
         }
-    },
-    setup(props) {
-        
     }
 }
 </script>
